@@ -8,7 +8,4 @@ pipeline {
     }
 
   }
-  environment {
-    Name = 'Udacity P3'
-  }
 }
