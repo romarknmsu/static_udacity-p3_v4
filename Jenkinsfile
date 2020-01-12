@@ -9,7 +9,7 @@ pipeline {
 
     stage('Upload to AWS') {
       steps {
-        sh 'withAWS(region:\'us-east-2\',credentials:\'aws-static\')'
+        withAWS(region:'us-east-2',credentials:'aws-static') {
         s3Upload(bucket: 'static-jenkins-pipeline-romero', pathStyleAccessEnabled: true, payloadSigningEnabled: true, file: 'index.html')
       }
     }
