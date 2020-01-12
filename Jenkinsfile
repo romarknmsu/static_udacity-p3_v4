@@ -11,7 +11,7 @@ pipeline {
         s3Upload(bucket: 'static-jenkins-pipeline-romero', pathStyleAccessEnabled: true, payloadSigningEnabled: true, file: 'index.html')
       }
     }
-
   }
+}
 }
 }
